@@ -1,4 +1,4 @@
-scene.setBackgroundColor(0)
+scene.setBackgroundColor(9)
 tiles.setTilemap(tilemap`level1`)
 let mySprite = sprites.create(img`
     ........................
@@ -26,4 +26,7 @@ let mySprite = sprites.create(img`
     ........................
     ........................
     `, SpriteKind.Player)
+tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 0))
+controller.moveSprite(mySprite)
 music.setVolume(20)
+scene.cameraFollowSprite(mySprite)
