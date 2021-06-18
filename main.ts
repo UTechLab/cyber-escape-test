@@ -1,3 +1,6 @@
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleBlueCrystal, function (sprite, location) {
+    game.showLongText("Hooray!", DialogLayout.Bottom)
+})
 scene.setBackgroundColor(10)
 tiles.setTilemap(tilemap`level1`)
 let mySprite = sprites.create(img`
@@ -26,7 +29,7 @@ let mySprite = sprites.create(img`
     ........................
     ........................
     `, SpriteKind.Player)
-tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 0))
+tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 5))
 music.setVolume(20)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
