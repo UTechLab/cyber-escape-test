@@ -21,7 +21,7 @@ let mySprite = sprites.create(img`
     . . c b d d d d d 5 5 5 b b . . 
     . . . c c c c c c c c b b . . . 
     `, SpriteKind.Player)
-tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 2))
+tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 1))
 music.setVolume(20)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
